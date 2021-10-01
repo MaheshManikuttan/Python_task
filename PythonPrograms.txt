@@ -1,0 +1,61 @@
+Q1)
+#remove duplicate and combine two list
+
+a = [ 'Python', 'Rg', 'Perl', 'shell', 'powershell']
+b = [ 'Java', 'golang', 'shell', 'powershell']
+print("list1 = " +str(a)+"\n")
+print("List2 = " +str(b)+"\n")
+a=list(set(a+b))
+print("******AFTER REMOVING DUPLICATE*****\n")
+print("list = " +str(a))
+
+
+
+
+Q2)
+#Dictionary
+d={"Name":"Mahesh","Age":22,"Employee_num":10101}
+print(d)
+
+
+
+Q3)
+
+# Check whether user given year is Leap Year or not
+year = int(input("Enter a year: "))
+if (year%400 == 0):
+          print("%d is a Leap Year" %year)
+elif (year%100 == 0):
+          print("%d is Not a Leap Year" %year)
+elif (year%4 == 0):
+          print("%d is a Leap Year" %year)
+else:
+          print("%d is Not a Leap Year" %year)
+
+
+Q4) 
+# Write a code to validate the list and
+#pick out the element name this is repeated more than once and print it 
+
+from collections import Counter
+list1 =  ["Apple" , "Orange" , "Lemon " , "Orange"]
+d = Counter(list1)
+new_list = list([item for item in d if d[item]>1])
+print(new_list)
+
+Q5)
+
+#From below given lists, verify list "b" should be subset of list "a"
+#& fail in case if it is not
+
+a= [ 'Python', 'Rg', 'Perl', 'shell', 'powershell']
+b = [ 'Java', 'perl',  'shell', 'powershell']
+print ("Original list : " + str(a))
+print ("\nOriginal sub list : " + str(b))
+flag = 0
+if(set(b).issubset(set(a))):
+    flag = 1
+if (flag) :
+    print ("\nlist is subset of other.")
+else :
+    print ("\nlist is Not subset of other.")
